@@ -1,0 +1,7 @@
+- make, model, the number of kilometers, charger are used only in descriptive/graphical analysis but dropped in prediction models as they are not available for those with no EV by definition
+- We downsampled the power quality dataset (30 minutes interval) to match with consumption dataset. We propose going the other way around if this algorithm is deployed on a large scale with higher computing power
+
+- Collapsing channels in power quality<br> 
+    phase 0: drop channel b<br>
+    phase 2: collapse channels; voltage -> mean, amps -> mean, power factor -> absolute mean<br>
+- Collapsing variables to be weekly averages (as features)<br>
